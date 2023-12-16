@@ -47,4 +47,6 @@ void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
 void exchange_nodes(listint_t **h, listint_t **n1, listint_t *n2);
 
+/* prototypes for 2-selection_sort.c */
+void selection_sort(int *array, size_t size);
 #endif /* SORT_H */
