@@ -43,4 +43,8 @@ void print_array(const int *array, size_t size);
 /* prototypes for print_list.c */
 void print_list(const listint_t *list);
 
+/* prototypes for 1-insertion_sort_list.c */
+void insertion_sort_list(listint_t **list);
+void exchange_nodes(listint_t **h, listint_t **n1, listint_t *n2);
+
 #endif /* SORT_H */
