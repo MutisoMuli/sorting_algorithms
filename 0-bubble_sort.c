@@ -1,12 +1,12 @@
 #include "sort.h"
 
 /**
- * exchange_ints - Swap two integers in an array.
+ * swap_ints - Swap two integers in an array.
  *
  * @a: Pointer to the first integer to be swapped.
  * @b: Pointer to the second integer to be swapped.
  */
-void exchange_ints(int *a, int *b)
+void swap_ints(int *a, int *b)
 {
 	int tmp;
 
@@ -39,7 +39,7 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[i] > array[i + 1])
 			{
-				exchange_ints(array + i, array + i + 1);
+				swap_ints(array + i, array + i + 1);
 				print_array(array, size);
 				bubbly = false;
 			}
