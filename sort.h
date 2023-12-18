@@ -61,4 +61,7 @@ void shell_sort(int *array, size_t size);
 /*101-cocktail_sort.c*/
 void cocktail_sort_list(listint_t **list);
 
+/* prototype for 102-countin_sort.c*/
+void counting_sort(int *array, size_t size);
+
 #endif /* SORT_H */
