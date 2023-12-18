@@ -9,9 +9,9 @@
 #define DOWN 1
 
 /**
- * enum Bool - Enumeration representing Boolean values.
- * @False: Represents the value 0.
- * @True: Represents the value 1.
+ * enum bool - Enumeration representing Boolean values.
+ * @false: Represents the value 0.
+ * @true: Represents the value 1.
  */
 typedef enum bool
 {
@@ -28,9 +28,9 @@ typedef enum bool
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 /* prototypes for 0-bubble_sort.c */
