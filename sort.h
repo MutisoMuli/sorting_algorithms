@@ -55,4 +55,7 @@ int lomutoscheme_partition(int *array, size_t size, int left, int right);
 void lomutoscheme_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
+/*protypes for 100-sell_sort.c*/
+void shell_sort(int *array, size_t size);
+
 #endif /* SORT_H */
