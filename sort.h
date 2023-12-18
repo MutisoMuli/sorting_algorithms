@@ -58,4 +58,7 @@ void quick_sort(int *array, size_t size);
 /*protypes for 100-sell_sort.c*/
 void shell_sort(int *array, size_t size);
 
+/*101-cocktail_sort.c*/
+void cocktail_sort_list(listint_t **list);
+
 #endif /* SORT_H */
