@@ -60,7 +60,7 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 /**
  * merge_sort - Sorts an array of ints in ascending
  * order using the merge sort algo.
- * @array: An array of integers.
+ * @array: An array of ints.
  * @size: The size of the array.
  *
  * Description: Operationazises the top-down merge sort algo.
