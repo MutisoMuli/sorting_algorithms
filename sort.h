@@ -67,4 +67,7 @@ void counting_sort(int *array, size_t size);
 /*prototypes for 103-mere_sort.c*/
 void merge_sort(int *array, size_t size);
 
+/*104-eap_sort.c*/
+void heap_sort(int *array, size_t size);
+
 #endif /* SORT_H */
