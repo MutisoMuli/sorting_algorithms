@@ -76,4 +76,7 @@ void radix_sort(int *array, size_t size);
 /*106-bitonic_sort.c prototype*/
 void bitonic_sort(int *array, size_t size);
 
+/*107-quick_sort_sort_oare.c prototypes*/
+void quick_sort_hoare(int *array, size_t size);
+
 #endif /* SORT_H */
