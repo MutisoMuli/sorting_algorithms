@@ -34,7 +34,7 @@ typedef struct listint_s
 } listint_t;
 
 /* prototypes for 0-bubble_sort.c */
-void swap_ints(int *a, int *b);
+void exchange_ints(int *a, int *b);
 void bubble_sort(int *array, size_t size);
 
 /* prototypes for print_array.c */
