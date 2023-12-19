@@ -26,7 +26,7 @@ void swap_ints(int *a, int *b)
  * @size: The array's size.
  * @left: The initiating index of the ordered subset.
  * @right: The final index of the ordered subset.
- 
+
  * Return: The final partition index.
  */
 int lomutoscheme_partition(int *array, size_t size, int left, int right)
