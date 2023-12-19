@@ -2,7 +2,7 @@
 
 void combine_subarr(int *subarr, int *buff, size_t front, size_t mid,
 		size_t back);
-void combine_organize_recursive(int *subarr, int *buff, size_t front, size_t back);
+void combine_org_recursive(int *subarr, int *buff, size_t front, size_t back);
 void merge_sort(int *array, size_t size);
 
 /**
@@ -38,22 +38,22 @@ void combine_subarr(int *subarr, int *buff, size_t front, size_t mid,
 }
 
 /**
- * combine_organize_recursive - Operationalises the merge sort
+ * combine_org_recursive - Operationalises the merge sort
  * algos by recursion.
  * @subarr: The subarray of an array of ints to sort.
  * @buff: A buff where  the sorted results are stored.
  * @front: The front index of the subarray.
  * @back: The back index of the subarray.
  */
-void combine_organize_recursive(int *subarr, int *buff, size_t front, size_t back)
+void combine_org_recursive(int *subarr, int *buff, size_t front, size_t back)
 {
 	size_t mid;
 
 	if (back - front > 1)
 	{
 		mid = front + (back - front) / 2;
-		combine_organize_recursive(subarr, buff, front, mid);
-		combine_organize_recursive(subarr, buff, mid, back);
+		combine_org_recursive(subarr, buff, front, mid);
+		combine_org_recursive(subarr, buff, mid, back);
 		combine_subarr(subarr, buff, front, mid, back);
 	}
 }
@@ -77,7 +77,7 @@ void merge_sort(int *array, size_t size)
 	if (buff == NULL)
 		return;
 
-	combine_organize_recursive(array, buff, 0, size);
+	combine_org_recursive(array, buff, 0, size);
 
 	free(buff);
 }
