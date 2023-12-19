@@ -1,17 +1,17 @@
 #include "sort.h"
 
-int get_max(int *array, int size);
-void radix_counting_sort(int *array, size_t size, int sig, int *buff);
+int secure_maximum(int *array, int size);
+void radix_count_sort(int *array, size_t size, int sig, int *buff);
 void radix_sort(int *array, size_t size);
 
 /**
- * get_max - Secures maximum value in an array of ints.
+ * secure_maximum - Secures maximum value in an array of ints.
  * @array: An integers' array.
  * @size: The array's size.
  *
  * Return: The largest int in the array.
  */
-int get_max(int *array, int size)
+int secure_maximum(int *array, int size)
 {
 	int max, i;
 
@@ -25,14 +25,14 @@ int get_max(int *array, int size)
 }
 
 /**
- * radix_counting_sort - Sorts the largest digits of an array of ints
+ * radix_count_sort - Sorts the largest digits of an array of ints
  * in ascending order using the counting sort algos.
  * @array: An integers' array.
  * @size: The array's size.
  * @sig: The biggest digit to sort on.
  * @buff: A buffer that stores the sorted array.
  */
-void radix_counting_sort(int *array, size_t size, int sig, int *buff)
+void radix_count_sort(int *array, size_t size, int sig, int *buff)
 {
 	int count[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	size_t i;
@@ -73,10 +73,10 @@ void radix_sort(int *array, size_t size)
 	if (buff == NULL)
 		return;
 
-	max = get_max(array, size);
+	max = secure_maximum(array, size);
 	for (sig = 1; max / sig > 0; sig *= 10)
 	{
-		radix_counting_sort(array, size, sig, buff);
+		radix_count_sort(array, size, sig, buff);
 		print_array(array, size);
 	}
 
