@@ -73,4 +73,7 @@ void heap_sort(int *array, size_t size);
 /*105-radix_sort.c prototype */
 void radix_sort(int *array, size_t size);
 
+/*106-bitonic_sort.c prototype*/
+void bitonic_sort(int *array, size_t size);
+
 #endif /* SORT_H */
