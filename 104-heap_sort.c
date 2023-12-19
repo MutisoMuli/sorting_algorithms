@@ -1,15 +1,15 @@
 #include "sort.h"
 
-void swap_ints(int *a, int *b);
-void max_heapify(int *array, size_t size, size_t base, size_t root);
+void exchange_ints(int *a, int *b);
+void large_heapify(int *array, size_t size, size_t base, size_t root);
 void heap_sort(int *array, size_t size);
 
 /**
- * swap_ints - Swaps 2 ints in an array.
+ * exchange_ints - Swaps 2 ints in an array.
  * @a: The 1st int to swap.
  * @b: The 2nd int to swap.
  */
-void swap_ints(int *a, int *b)
+void exchange_ints(int *a, int *b)
 {
 	int tmp;
 
@@ -19,13 +19,13 @@ void swap_ints(int *a, int *b)
 }
 
 /**
- * max_heapify - Turn a binary tree into a complete binary heap.
+ * large_heapify - Turn a binary tree into a complete binary heap.
  * @array: An array of ints repin a binary tree.
  * @size: The array/tree's size.
  * @base: The index of the base row of the tree.
  * @root: The root node of the bin tree.
  */
-void max_heapify(int *array, size_t size, size_t base, size_t root)
+void large_heapify(int *array, size_t size, size_t base, size_t root)
 {
 	size_t left, right, large;
 
@@ -40,9 +40,9 @@ void max_heapify(int *array, size_t size, size_t base, size_t root)
 
 	if (large != root)
 	{
-		swap_ints(array + root, array + large);
+		exchange_ints(array + root, array + large);
 		print_array(array, size);
-		max_heapify(array, size, base, large);
+		large_heapify(array, size, base, large);
 	}
 }
 
@@ -63,12 +63,12 @@ void heap_sort(int *array, size_t size)
 		return;
 
 	for (y = (size / 2) - 1; y >= 0; y--)
-		max_heapify(array, size, size, y);
+		large_heapify(array, size, size, y);
 
 	for (y = size - 1; y > 0; y--)
 	{
-		swap_ints(array, array + y);
+		exchange_ints(array, array + y);
 		print_array(array, size);
-		max_heapify(array, size, y, 0);
+		large_heapify(array, size, y, 0);
 	}
 }
