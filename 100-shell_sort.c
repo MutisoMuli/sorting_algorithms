@@ -1,11 +1,11 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swaps 2 ints in an array.
+ * exchange_ints - Swaps 2 ints in an array.
  * @a: The 1st int to swap.
  * @b: The 2nd int to swap.
  */
-void swap_ints(int *a, int *b)
+void exchange_ints(int *a, int *b)
 {
 	int tmp;
 
@@ -39,7 +39,7 @@ void shell_sort(int *array, size_t size)
 			n = m;
 			while (n >= gap && array[n - gap] > array[n])
 			{
-				swap_ints(array + n, array + (n - gap));
+				exchange_ints(array + n, array + (n - gap));
 				n -= gap;
 			}
 		}
